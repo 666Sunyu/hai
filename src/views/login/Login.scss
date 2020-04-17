@@ -1,0 +1,44 @@
+ .container {
+     background: url(../../assets/images/login/bj.jpg) no-repeat;
+     background-size: 100%;
+ }
+
+ .wrapper {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     width: 798px;
+     height: 454px;
+     background: url('../../assets/images/login/login.png') no-repeat;
+ }
+
+ /deep/.login-form {
+     max-width: 300px;
+     margin-top: 160px;
+     margin-left: 447px;
+ }
+
+
+ /deep/.login-form-forgot {
+     float: right;
+ }
+
+ .btnWrap {
+     display: flex;
+     justify-content: center;
+     padding-right: 30px;
+
+     /deep/.login-form-button {
+         width: 40%;
+         margin-right: 8px;
+         border-radius: 20px;
+     }
+ }
+
+
+ /deep/.ant-form-item-required {
+     color: #fcfcff;
+ }

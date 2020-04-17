@@ -1,0 +1,278 @@
+.container {
+    height: 100%;
+    background: rgb(213, 235, 255);
+}
+
+.content {
+    width: 90%;
+    min-width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 150px;
+    background: rgb(248, 252, 255);
+    box-shadow: 0px 0px 6px 4px #cdcdde;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 116px;
+    margin-top: 30px;
+
+    &::after {
+        position: absolute;
+        bottom: -20px;
+        right: 16px;
+        content: '';
+        width: 95%;
+        height: 1px;
+        background: #e8ddde;
+        box-shadow: 0px 2px 4px 0px #cdcdde;
+    }
+}
+
+.header>.scoreBox {
+    position: relative;
+    display: flex;
+    width: 780px;
+    flex-shrink: 0;
+
+    &::after {
+        position: absolute;
+        top: 20px;
+        right: 16px;
+        content: '';
+        width: 1px;
+        height: 80%;
+        background: #e8ddde;
+    }
+
+    .images {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #efe0e0;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .levelBox {
+        flex-shrink: 0;
+
+        .title {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 8px;
+            margin-bottom: 15px;
+
+            .now {
+                color: rgb(92, 92, 91);
+                font-size: 16px;
+
+                >.score {
+                    font-size: 20px;
+                    font-weight: 1000;
+                    font-family: myNum;
+                    color: rgb(30, 14, 231);
+                }
+            }
+
+            .get {
+                font-size: 16px;
+                color: rgb(124, 149, 186);
+            }
+        }
+
+        .dott {
+            position: relative;
+            display: inline-block;
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+
+            &::before {
+                position: absolute;
+                top: -20px;
+                left: -26px;
+                width: 60px;
+                color: rgb(186, 189, 191);
+            }
+
+            &.dott1 {
+                &::before {
+                    content: '0';
+                }
+
+            }
+
+            &.dott2 {
+                &::before {
+                    content: '200';
+                }
+
+            }
+
+            &.dott3 {
+                &::before {
+                    content: '500';
+                }
+
+            }
+
+            &.dott4 {
+                &::before {
+                    content: '700';
+                }
+
+            }
+
+            &.dott5 {
+                &::before {
+                    content: '1000';
+                }
+
+            }
+
+            &.dott6 {
+                &::before {
+                    content: '1500';
+                }
+
+            }
+
+            &.dott7 {
+                &::before {
+                    content: '≥3000';
+                }
+
+            }
+
+        }
+
+        .ant-steps-item {
+            width: 86px;
+        }
+
+        /deep/.ant-steps-item-title {
+            color: rgb(186, 189, 191) !important;
+            font-size: 12px !important;
+        }
+    }
+}
+
+.header>.person {
+    position: relative;
+    width: 300px;
+    padding-top: 30px;
+
+    p {
+        span {
+            font-family: myNum;
+            color: #635c5c;
+            font-size: 16px;
+        }
+    }
+
+    .tit {
+        font-size: 14px;
+        color: #9494b5;
+        margin-right: 8px;
+    }
+
+    &:not(:last-child)::after {
+        position: absolute;
+        top: 20px;
+        right: 60px;
+        content: '';
+        width: 1px;
+        height: 80%;
+        background: #e8ddde;
+    }
+}
+
+.main {
+    display: flex;
+    margin-top: 40px;
+}
+
+.main>.examList {
+    .title {
+        text-align: center;
+    }
+
+    width: 700px;
+
+    .my_table {
+        border: 1px solid #ded3d3;
+    }
+}
+
+.main>.examBegin {
+    width: 50%;
+    text-align: center;
+    padding-top: 40px;
+
+    .begin {
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid #d2c1c1;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .surp {
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: myNum;
+
+        >span {
+            color: red;
+        }
+    }
+
+    .explain {
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 80px;
+        border: 1px solid #d2c1c1;
+        border-radius: 8px;
+        box-shadow: 0px 0px 7px 2px #cbcbda;
+        color: #655757;
+
+        .title {
+            font-size: 14px;
+            margin-top: 15px;
+            color: #655757;
+        }
+
+        >ul {
+            padding-left: 20px;
+
+            li {
+                font-family: myNum;
+                text-align: left;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+// 表头
+/deep/.ant-table-thead>tr {
+    >th {
+        padding: 8px;
+        background: rgb(201, 233, 254);
+    }
+}
+
+/deep/.ant-table-tbody>tr {
+    >td {
+        padding: 8px;
+    }
+}

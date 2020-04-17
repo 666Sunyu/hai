@@ -1,0 +1,41 @@
+.container {
+    background: url('../../../../assets//images/login/bj.jpg') no-repeat;
+    background-size: 100%;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 420px;
+    background: url('../../../../assets/images/examSle.png') no-repeat;
+    margin: 0 auto;
+
+    .sleBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 260px;
+        height: 100px;
+        text-align: center;
+
+        .ant-select {
+            width: 260px !important;
+        }
+
+        .btn {
+            width: 110px;
+            margin: 0 auto;
+            margin-top: 60px;
+
+            .my-btn {
+                width: 100%;
+                border-radius: 10px;
+
+            }
+        }
+    }
+}

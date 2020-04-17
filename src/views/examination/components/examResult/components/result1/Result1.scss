@@ -1,0 +1,78 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.w {
+    width: 48%;
+    margin: 0 auto;
+}
+
+.head {
+    height: 27px;
+    background-color: #bde0fb;
+    text-align: center;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.box2 {
+    min-height: 410px;
+    border: 1px solid #bbbbbb;
+    margin-top: 10px;
+}
+
+
+.box4 {
+    padding: 5px;
+    min-height: 380px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.box4 table {
+    border-collapse: collapse;
+    min-height: 410px;
+}
+
+.box4 table span {
+    font-weight: 700;
+}
+
+.box4 table input {
+    border: 0;
+    width: 99%;
+    height: 100%;
+    text-align: center;
+}
+
+.box4 table,
+th,
+td {
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+}
+
+.box4 table td {
+    width: 80px;
+    text-align: center;
+}
+
+.name {
+    width: 155px;
+    padding: 0 3px;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+/deep/.btn {
+    display: block;
+    padding: 5px 18px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 5px;
+}

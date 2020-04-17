@@ -1,0 +1,106 @@
+.w {
+    width: 1127px;
+    margin: 0 auto;
+}
+
+.box2 {
+    border: 1px solid #bbbbbb;
+    margin-top: 10px;
+}
+
+.box4 {
+    min-height: 410px;
+    width: 1115px;
+    border: 1px solid #dddddd;
+    margin: 5px;
+}
+
+.box5 {
+    margin: 6px;
+}
+
+.box5 h3 {
+    font-size: 18px;
+}
+
+.box5 p {
+    font-size: 17px;
+}
+
+.box6 table {
+    min-height: 180px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.box6 table,
+th,
+td {
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.box6 th,
+td {
+    width: 235px;
+}
+
+.box6 td {
+    position: relative;
+    // padding-left: 78px;
+    box-sizing: border-box;
+}
+
+.box6 select {
+    border: 0;
+    margin-left: 15px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.box7 {
+    margin: 6px;
+    position: relative;
+}
+
+.box7 h3 {
+    font-size: 18px;
+}
+
+.box7 textarea {
+    position: absolute;
+    height: 100px;
+    width: 947px;
+    left: 75px;
+    top: 5px;
+}
+
+.a1 {
+    color: red;
+}
+
+.name {
+    width: 145px;
+    padding: 0 3px;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.tip {
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+}
+
+/deep/.btn {
+    display: block;
+    padding: 5px 18px;
+    text-align: center;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 5px;
+}

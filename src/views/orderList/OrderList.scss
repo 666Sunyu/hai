@@ -1,0 +1,170 @@
+.container {
+    height: 100%;
+    background: rgb(213, 235, 255);
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: rgb(248, 252, 255);
+    box-shadow: 0px 0px 6px 4px #cdcdde;
+}
+
+.content>.rankingList {
+    width: 80%;
+    height: 90%;
+    overflow: auto;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        height: 80px;
+        line-height: 80px;
+
+        >.areaBox {
+            font-size: 16px;
+            color: rgb(103, 104, 106);
+
+            >span {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .table {
+        border: 1px solid #dccccc;
+
+        .number {
+            &.top3 {
+                color: red;
+            }
+
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #42aee4;
+            background: rgb(159, 221, 244);
+            // box-shadow: inset 0px 0px 4px 2px rgb(59, 191, 230);
+            font-weight: 1000;
+            color: rgb(61, 93, 176);
+            font-size: 12px;
+        }
+
+        .levels {
+            color: rgb(239, 128, 121);
+        }
+
+        .scores {
+            color: rgb(234, 102, 100);
+            font-weight: 1000;
+            font-family: myNum;
+        }
+
+        .date {
+            color: rgb(71, 97, 174);
+            font-family: myNum;
+        }
+    }
+
+    // 表头
+    /deep/.ant-table-thead>tr {
+        >th {
+            padding: 8px;
+            background: rgb(201, 233, 254);
+        }
+    }
+
+    /deep/.ant-table-tbody>tr {
+
+        &.light {
+            background: rgb(255, 248, 232);
+        }
+
+        >td {
+            padding: 8px;
+        }
+    }
+
+    /deep/.ant-table-thead>tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
+    /deep/.ant-table-tbody>tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
+    /deep/.ant-table-thead>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
+    /deep/.ant-table-tbody>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td {
+        background: rgb(255, 230, 173);
+    }
+
+
+}
+
+.content>.operate {
+    width: 20%;
+    height: 90%;
+
+    .logins {
+        margin-top: 105px;
+        margin-left: 45px;
+
+        >div {
+            width: 230px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            margin-top: 25px;
+            border: 1px solid #ceb4b4;
+            border-radius: 8px;
+            background: #fdebeb;
+            color: #767286;
+            cursor: pointer;
+        }
+    }
+
+    .notification {
+        width: 200px;
+        height: 280px;
+        margin-top: 80px;
+        margin-left: 58px;
+        padding: 20px 15px;
+        border: 1px solid #908080;
+        border-radius: 8px;
+
+        .title {
+            color: rgb(135, 131, 130);
+        }
+
+        p {
+            margin: 0;
+            color: rgb(59, 60, 62);
+        }
+
+        >h3 {
+            font-size: 13px;
+        }
+
+        .time {
+            margin-top: 10px;
+        }
+
+        .xls {
+            margin-top: 10px;
+
+            p {
+                margin-top: 20px;
+            }
+        }
+
+        .bottom {
+            margin-top: 18px;
+            float: right;
+        }
+
+
+    }
+}
+
+:global(.ant-table-filter-dropdown .ant-dropdown-menu) {
+    max-height: calc(100vh - 640px) !important;
+}

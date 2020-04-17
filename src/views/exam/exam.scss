@@ -1,0 +1,212 @@
+.container{
+    background-color: #d4ecff;
+    height: 100%;
+    .w{
+        background-color: #fff;
+        .bjt{
+            box-sizing: border-box;
+            padding-left: 35px;
+            display: flex;
+            padding-bottom: 40px;
+            background: url('./img/底部背景.jpg') bottom  no-repeat;
+
+        }
+        .left{
+            width: 975px;
+            .title{
+                height: 60px;
+                padding-left: 220px;
+             display: flex;
+             align-items: center;
+                .switch{
+                    cursor: pointer;
+                    margin-left: 10px;
+                    width: 115px;
+	                height: 26px;
+	                background-color: #356ca0;
+	                border-radius: 13px;
+                    border: solid 1px #248cce;
+                    font-size: 14px;
+                   
+                    display: flex;
+                    align-items: center;
+                    .active{
+                        display: inline-block;
+                        width: 56px;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+	                    background-color: #1d95e2;
+	                    border-radius: 10px;
+                        border: solid 1px #97d1f6;
+                        color: #fff;
+                    }
+                    span{
+                        display: inline-block;
+                        text-align: center;
+                        color: #bad1e0;
+                        width: 56px;
+                    }
+                }
+                .select{
+                   margin-left: 180px;
+                }
+            }
+            .content{
+                border: solid 1px #9f9f9f;
+                /deep/.el-table td, /deep/.el-table th{
+                padding: 0;
+                height: 33px;
+                }
+             
+                /deep/.el-table th{
+                background-color: #c9eafe !important;
+                }
+                /deep/.has-gutter{
+                    .cell{
+                        line-height: 14px;
+                        font-size: 14px;
+                        color: #222;
+                        font-family: "lato"!important;
+                        font-weight: normal;
+                      
+                        }   
+                    }    
+                   /deep/ .el-table__row {
+                  font-family: "lato"!important;
+              
+                    }
+                    /deep/.el-table__row  td:nth-of-type(3)  {
+                                color: red;
+                               font-family: "Helvetica" !important;
+                        }
+                        /deep/.el-table__row  td:nth-of-type(4){
+                            color: red;
+                        }
+                        /deep/  /deep/.el-table__row  td:nth-of-type(5),
+                        /deep/  /deep/.el-table__row  td:nth-of-type(6),
+                        /deep/  /deep/.el-table__row  td:nth-of-type(7),
+                        /deep/  /deep/.el-table__row  td:nth-of-type(8) {
+                           color: #4661af;
+                        }
+                        /deep/ .el-table__body-wrapper table tr:nth-of-type(-n+10){
+                            background-color: #fff8e8;
+                        }
+                        /deep/ .el-table__body tr:hover > td{
+                            background-color:#ffe6ad !important;
+                        }
+                        /deep/.el-table__body-wrapper{
+                        tbody{
+                            tr:nth-of-type(n+4){
+                                
+                                td:nth-of-type(1) .cell{
+                                    background: url('./img/排4.png') center no-repeat;
+                                        color: #2641a4;
+                                
+                                 }
+                            }
+                        }
+                       } 
+        }
+    }
+        .right{
+            padding: 16px 16px 0 16px;
+            box-sizing: border-box;
+            .js{
+              
+                padding: 80px 20px 0 20px;
+            width: 244px;
+	        height: 321px;
+	        background: url('./img/jstz.png') no-repeat center;
+	        box-shadow: 1px 2px 6px 0px 
+		rgba(147, 163, 199, 0.65);
+            border-radius: 16px;
+            display: flex;
+            flex-direction:column;
+            span{
+            margin-bottom: 12px;
+            }
+            >span:nth-of-type(2){
+                margin-bottom: 5px;
+                color: red;
+            }
+            >span:nth-of-type(3){
+                color: red;
+            }
+            a{
+                text-decoration:underline ;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+               align-items: flex-end;
+               i{
+                   font-style: normal;
+               }
+            }
+	   
+            }
+            .dl{
+                width: 100%;
+                margin-top: 15px;
+                height: 44px;
+              
+                .kszc{
+                    cursor: pointer;
+                    display: inline-block;
+                    width: 143px;
+                    height: 44px;
+                   background: url('./img/登录.png') no-repeat top;
+                   background-size: 143px;
+                }
+                .kszc:hover{
+                    background: url('./img/登录.png') no-repeat 0 -48px;
+                    background-size: 143px;
+                }
+                .zc{
+                    cursor: pointer;
+                    margin-left: 14px;
+                    display: inline-block;
+                    width: 88px;
+                    height: 44px;
+                    background-color: #fff;
+                    background: url('./img/注册.png') no-repeat top;
+                    background-size: 88px;
+                }
+                .zc:hover{
+                    background: url('./img/注册.png') no-repeat 0 -45px;
+                    background-size: 88px;
+                }
+            }
+            .ts{
+                margin-top: 15px;
+                padding-left: 20px;
+                height: 30px;
+                font-size: 14px;
+                color: #6c8ad0;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    margin-left: -15px;
+                    background: url('./img/提示.png');
+                }
+            }
+            .da{
+                margin-top: 20px;
+                padding-top: 60px;
+             
+                width: 244px;
+                height: 304px;
+                background: url('./img/ksda.png') no-repeat;
+                background-size: 244px;
+                li{
+                    text-align: center;
+                    font-size:13px;
+                   line-height:28px;
+                }
+            }
+        }
+    }
+}

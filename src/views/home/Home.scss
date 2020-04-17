@@ -1,0 +1,172 @@
+section {
+    height: 100%;
+}
+
+.home {
+    position: relative;
+    height: 100%;
+    padding-top: 68px;
+}
+
+.content {
+    // position: relative;
+    min-height: 100%;
+    background-color: #fff;
+    // background-image: linear-gradient(180deg, #e8ebec 53%, #aec8e0 100%);
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background: url(../../assets/images/header/bg.png) repeat-x;
+    z-index: 1000;
+
+    .logo-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .right-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 745px;
+        display: flex;
+        right: 0;
+        height: 100%;
+    }
+
+    .loginWrap {
+        margin-left: 400px;
+
+        .login {
+            color: #e8ebef;
+            width: 85px;
+            height: 31px;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 20px;
+            background: url('../../assets//images/header/btn_login.png') no-repeat;
+            cursor: pointer;
+            overflow: hidden;
+
+            &:hover {
+                background-position: 0 -31px;
+            }
+        }
+
+        .exitWrap {
+            >.exit {
+                display: inline-block;
+                width: 85px;
+                height: 31px;
+                text-align: center;
+                line-height: 30px;
+                margin-top: 20px;
+                background: url('../../assets//images/header/btn_exit.png') no-repeat;
+                cursor: pointer;
+                overflow: hidden;
+
+                &:hover {
+                    background-position: 0 -31px;
+                }
+
+                >img {
+                    vertical-align: middle;
+                }
+
+                >span {
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+
+            .user {
+                display: inline-block;
+                height: 68px;
+                line-height: 68px;
+                vertical-align: top;
+                color: #eae6e6;
+                margin-right: 15px;
+                margin-top: 0;
+                font-size: 16px;
+                cursor: default;
+            }
+        }
+    }
+
+    .menu-item {
+        position: relative;
+        display: inline-block;
+        width: 196px;
+        height: 61px;
+        margin-top: 2px;
+        background-repeat: no-repeat;
+        background-position-y: 5px;
+        color: #f0f7ff;
+
+        span {
+            position: absolute;
+            top: 43px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: "微软雅黑";
+            font-size: 15px;
+            text-shadow: 0 1px 1px rgba(0, 32, 103, 0.25);
+            transition: all 0.3s;
+        }
+
+        &.synthesis {
+            background-image: url(../../assets/images/menus/case.png);
+        }
+
+        &.examination {
+            background-image: url(../../assets/images/menus/exam.png);
+        }
+
+        &.autoStation {
+            background-image: url(../../assets/images/menus/auto.png);
+        }
+
+        &.statistical {
+            background-image: url(../../assets/images/menus/sta.png);
+        }
+
+
+        &:hover {
+            color: #fff;
+            background-position-y: -58px;
+
+            span {
+                text-shadow: 0 1px 1px rgba(0, 32, 103, 0.58);
+            }
+        }
+
+        &.active {
+            color: #fff;
+            background-position-y: -118px;
+
+            span {
+                text-shadow: 0 1px 1px rgba(0, 32, 103, 0.95);
+            }
+        }
+    }
+}

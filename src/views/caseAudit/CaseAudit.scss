@@ -1,0 +1,114 @@
+.container {
+    min-height: 100%;
+    background: #f1f5ff;
+
+    .head {
+        width: 1270px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        line-height: 64px;
+
+        .imgWrap {
+            .save_img {
+                vertical-align: middle;
+            }
+        }
+
+        .back {
+            font-size: 13px;
+            margin-right: 30px;
+
+            img {
+                vertical-align: middle;
+                cursor: pointer;
+            }
+
+            span {
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .centerWrap {
+        box-sizing: border-box;
+        padding-bottom: 15px;
+
+        .saveFile {
+            width: 1270px;
+            min-height: 600px;
+            padding: 0 10px;
+            margin: 0 auto;
+            border-radius: 15px;
+            border: 1px solid #dee1e4;
+            background: #fff;
+            box-shadow: 0px 4px 10px 0px #ced3da;
+
+            .typeWrap {
+                height: 40px;
+                margin-top: 25px;
+                border-bottom: 1px solid #ead6d6;
+
+                >span {
+                    display: inline-block;
+                    width: 100px;
+                    height: 100%;
+                    text-align: center;
+                    padding: 5px 12px;
+                    cursor: pointer;
+
+                    &.active {
+                        color: blue;
+                        border-bottom: 2px solid blue;
+                    }
+                }
+            }
+        }
+    }
+
+    /deep/.ant-table-tbody>tr>td {
+        max-width: 230px;
+    }
+
+    .td_audit {
+        display: inline-block;
+        width: 44px;
+        height: 21px;
+        background: url('./imgs/审核.png');
+        color: aquamarine;
+        cursor: pointer;
+
+        &:hover {
+            background-position-y: 21px;
+        }
+    }
+
+    .td_xiugai {
+        display: inline-block;
+        width: 44px;
+        height: 19px;
+        background: url('./imgs/修改.png');
+        color: aquamarine;
+        cursor: pointer;
+
+        &:hover {
+            background-position-y: 19px;
+        }
+    }
+
+    .td_delete {
+        display: inline-block;
+        width: 44px;
+        height: 19px;
+        margin-left: 8px;
+        background: url('./imgs/删除.png');
+        color: aquamarine;
+        cursor: pointer;
+
+        &:hover {
+            background-position-y: 19px;
+        }
+    }
+}

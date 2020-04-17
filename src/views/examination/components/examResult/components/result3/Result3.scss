@@ -1,0 +1,111 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.w {
+    width: 48%;
+    margin: 0 auto;
+}
+
+.head {
+    height: 27px;
+    background-color: #bde0fb;
+    text-align: center;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.box2 {
+    border: 1px solid #bbbbbb;
+    margin-top: 10px;
+}
+
+.box4 {
+    min-height: 260px;
+    border: 1px solid #dddddd;
+    margin: 5px;
+}
+
+.box5 {
+    margin: 6px;
+}
+
+.box5 h3 {
+    font-size: 18px;
+}
+
+.box5 p {
+    font-size: 17px;
+}
+
+.box6 table {
+    min-height: 130px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.box6 table,
+th,
+td {
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.box6 th,
+td {
+    width: 235px;
+}
+
+.box6 td {
+    // padding-left: 78px;
+    box-sizing: border-box;
+}
+
+.box6 select {
+    border: 0;
+    margin-left: 15px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.box7 {
+    margin: 6px;
+    position: relative;
+}
+
+.box7 h3 {
+    font-size: 18px;
+}
+
+.box7 textarea {
+    position: absolute;
+    left: 75px;
+    top: 5px;
+    width: 90%;
+    height: 80px;
+}
+
+.a1 {
+    color: red;
+}
+
+.name {
+    width: 145px;
+    padding: 0 3px;
+}
+
+.total {
+    color: #191414;
+    height: 45px;
+}
+
+/deep/.btn {
+    display: block;
+    padding: 5px 18px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 5px;
+}

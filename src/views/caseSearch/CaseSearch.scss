@@ -1,0 +1,843 @@
+.container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    background: #d9eafb;
+    overflow: hidden;
+
+    .tip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 150px;
+        padding: 15px 10px;
+        background: #fdfdfdc4;
+        border: 1px solid #7cda92;
+        border-radius: 5px;
+        z-index: 1000;
+
+        >div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .tableModal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 700;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+
+        .mapTable {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -45%);
+            width: 80vw;
+            background: #fff;
+            padding-top: 25px;
+            padding-bottom: 8px;
+            border: 1px solid #b3d6d5;
+            border-radius: 10px;
+            z-index: 600;
+
+            >.close {
+                position: absolute;
+                top: -3px;
+                right: 20px;
+                font-size: 20px;
+                z-index: 600;
+                cursor: pointer;
+            }
+
+            /deep/.ant-table-tbody>tr>td {
+                max-width: 180px;
+            }
+
+            .td_look {
+                display: inline-block;
+                width: 60px;
+                height: 22px;
+                background: url('./imgs/look.png');
+                vertical-align: middle;
+                cursor: pointer;
+
+                &:hover {
+                    background-position-y: 22px;
+                }
+            }
+
+            .td_compile {
+                margin: 0 8px;
+                color: blue;
+                cursor: pointer;
+            }
+
+            .td_delete {
+                color: red;
+                cursor: pointer;
+            }
+        }
+    }
+
+    // .screenCap {
+    //     position: absolute;
+    //     top: 80px;
+    //     right: 10px;
+    //     width: 40px;
+    //     height: 40px;
+    //     background: url('./imgs/截屏.png');
+    //     background-size: 100% 100%;
+    //     z-index: 600;
+    //     cursor: pointer;
+    // }
+    .screenCap {
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        width: 36px;
+        height: 50px;
+        background: url('./imgs/jietu.png');
+        background-size: 100% 100%;
+        z-index: 600;
+        cursor: pointer;
+    }
+
+    .legend {
+        position: absolute;
+        bottom: 15px;
+        right: 30px;
+        display: flex;
+        width: 600px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: #333;
+        text-shadow: #fff 1px 1px 0, #fff 1px -1px 0, #fff -1px 1px 0, #fff -1px -1px 0;
+        transition: 0.3s;
+        z-index: 600;
+
+        &.move {
+            right: 560px;
+        }
+
+        >i {
+            display: inline-block;
+            width: 100px;
+            font-style: normal;
+        }
+
+        >span {
+            flex: 1;
+            border: 1px solid #545454;
+            border-right: none;
+
+            &:last-child {
+                border-right: 1px solid #545454;
+            }
+
+            &:nth-of-type(1) {
+                background: #a5e9cd;
+            }
+
+            &:nth-of-type(2) {
+                background: #53c6f6;
+            }
+
+            &:nth-of-type(3) {
+                background: #fff339;
+            }
+
+            &:nth-of-type(4) {
+                background: #ffc438;
+            }
+
+            &:nth-of-type(5) {
+                background: #ff7327;
+            }
+
+            &:nth-of-type(6) {
+                background: #fd3015;
+                ;
+            }
+
+            &:nth-of-type(7) {
+                background: #cf003a;
+            }
+        }
+    }
+
+    .mapWrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: rgb(138, 212, 255);
+
+        /deep/.dName {
+            width: 110px !important;
+            margin-top: 20px !important;
+        }
+
+        /deep/.toll {
+            color: red;
+            font-size: 26px;
+            text-shadow: #fff 1px 1px 0, #fff 1px -1px 0, #fff -1px 1px 0, #fff -1px -1px 0;
+
+        }
+
+        /deep/.mapTitle {
+            width: 580px !important;
+            font-size: 18px;
+            color: #3434a5;
+        }
+
+        /deep/.mapShuiyin {
+            width: 338px !important;
+            height: 41px !important;
+            background: url('./imgs/水印.png');
+        }
+
+        /deep/.cj {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: -35px;
+                left: 15px;
+                content: '昌江黎族自治县';
+                color: #000;
+                transform: rotateZ(-45deg);
+            }
+        }
+    }
+
+
+    .left {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        width: 793px;
+        // width: 41%;
+        height: 90%;
+        padding: 10px 30px 15px;
+        border-radius: 20px;
+        z-index: 500;
+        background: #fff;
+        box-shadow: 0px 0px 7px 0px #7f7878;
+        transition: 0.3s;
+
+        &.shrink {
+            left: -41%;
+        }
+
+        .sk {
+            position: absolute;
+            top: 50%;
+            right: -24px;
+            width: 24px;
+            height: 53px;
+            background: url('./imgs/shrink.png');
+            cursor: pointer;
+
+            &.shrink {
+                background-position-x: 24px;
+            }
+        }
+
+        .searchs {
+            position: relative;
+            color: #000;
+            margin-bottom: 33px;
+
+            &::after {
+                position: absolute;
+                bottom: -33px;
+                left: -30px;
+                content: '';
+                width: 108%;
+                height: 27px;
+                background: url('./imgs/fenge.png');
+            }
+
+            >h2 {
+                margin-bottom: 10px;
+                font-size: 17px;
+                font-weight: 1000;
+                text-align: center;
+            }
+
+            .xuantime {
+                position: relative;
+                border-radius: 5px;
+                box-shadow: 0 0 8px rgba(96, 110, 129, 0.7);
+                background: #fff;
+
+                .statetime {
+                    margin: 0 5px;
+                }
+
+                .nianfen {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 140px;
+                    margin-top: 5px;
+                    margin-left: 20px;
+                    border: 1px solid #c3b6b6;
+                    cursor: pointer;
+
+                    >span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 70%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    &>i {
+                        display: inline-block;
+                        width: 14px;
+                        height: 13px;
+                        background: url('../../assets/images/下拉.png') no-repeat;
+                        background-size: 100% 100%;
+                        vertical-align: middle;
+                        // right: -20px;
+                        // top: 7px;
+                    }
+                }
+
+                .nianfenxuanze {
+                    position: absolute;
+                    top: 30px;
+                    left: 227px;
+                    width: 400px;
+                    text-align: left;
+                    z-index: 1001;
+                    padding: 20px;
+                    background: #fff;
+                    color: #000;
+                    border: 1px solid #e2d3d3;
+
+                    .btn {
+                        margin-top: 10px;
+                        margin-left: 130px;
+                    }
+
+                    & label {
+                        margin: 0 30px 0 10px;
+                    }
+
+                    .nfwrap {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    & span {
+                        text-decoration: none !important;
+                    }
+
+                    // display: none;
+                }
+
+                .endtime {
+                    margin: 0 70px 0 5px;
+                    position: relative;
+
+                    & i {
+                        display: block;
+                        position: absolute;
+                        width: 11px;
+                        height: 6px;
+                        background: url('../../assets/images/jiantou.png') no-repeat center center;
+                        right: -20px;
+                        top: 7px;
+                    }
+                }
+
+                .shijianxuanze {
+                    display: flex;
+                    width: 100%;
+                    color: #000;
+
+                    .timeType {
+                        display: flex;
+                        flex-direction: column;
+                        width: 103px;
+                        text-align: center;
+
+                        >div {
+                            width: 108px;
+                            height: 100%;
+                            line-height: 52px;
+                            font-size: 15px;
+                            color: #9c9c9c;
+                            cursor: pointer;
+
+                            &.active {
+                                position: relative;
+                                color: #1f1f1f;
+                                background: url('./imgs/上标签.png');
+
+                                // &::before {
+                                //     position: absolute;
+                                //     content: '';
+                                //     width: 13px;
+                                //     height: 13px;
+                                //     background-image: url('../../assets//images/2.png');
+                                //     top: 23px;
+                                //     left: 10px;
+                                // }
+                            }
+                        }
+                    }
+
+                    .dates1,
+                    .dates2 {
+                        width: 100%;
+                        padding-left: 20px;
+                        box-shadow: 0 0 2px rgba(96, 110, 129, 0.7);
+
+                        .dateShow {
+                            position: relative;
+                            text-align: center;
+
+                            .ipt {
+                                width: 30px;
+                                line-height: 20px;
+                                vertical-align: middle;
+                                height: 22px;
+                                margin-top: 3px;
+                            }
+
+                            input {
+                                width: 30px;
+                                line-height: 20px;
+                                vertical-align: middle;
+                                height: 22px;
+                                margin-top: 3px;
+                            }
+
+                            .ant-input {
+                                padding: 0 5px;
+                            }
+
+                            label {
+                                vertical-align: middle;
+                                margin-left: 2px;
+                            }
+
+                            .kn {
+                                margin-left: 30px;
+                            }
+                        }
+                    }
+
+                    .dates2 {
+                        .dateShow {
+                            display: flex;
+                            height: 100%;
+                            justify-content: center;
+                            align-items: center;
+
+                            >div {
+                                >span {
+                                    display: block;
+                                    text-align: left;
+                                    color: #827575;
+                                }
+                            }
+
+                            .begin {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        margin-top: 5px;
+                        margin-bottom: 0;
+
+                        &.jnList {
+                            li {
+                                label {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+
+                        li {
+                            position: relative;
+                            line-height: 30px;
+                            margin-right: 15px;
+                            color: #8a7d7d;
+                            margin-right: 50px;
+
+                            // &:not(:last-child)::after {
+                            //     position: absolute;
+                            //     top: 7px;
+                            //     right: -8px;
+                            //     content: '';
+                            //     width: 1px;
+                            //     height: 50%;
+                            //     background: #8a7d7d;
+
+                            // }
+
+                            input {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .happend {
+                display: flex;
+                margin-top: 15px;
+
+                .disaster {
+                    position: relative;
+                    width: 405px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0px;
+                        right: -10px;
+                        width: 1px;
+                        height: 100%;
+                        background: #cebaba;
+                    }
+
+                    /deep/ .ant-checkbox-wrapper {
+                        min-width: 88px;
+                        margin-top: 2px;
+                        color: #000;
+                    }
+                }
+
+                .happenPlace {
+                    width: 400px;
+                    margin-left: 40px;
+
+                    >div {
+                        margin-bottom: 10px;
+                    }
+
+                    /deep/ .ant-checkbox-wrapper {
+                        min-width: 61px;
+                        margin-top: 4px;
+                        color: #000;
+                    }
+                }
+            }
+
+            .search {
+                width: 103px;
+                height: 29px;
+                margin: 10px auto;
+                background: url('./imgs/seach.png');
+                cursor: pointer;
+
+                &:hover {
+                    background-position-y: 29px;
+                }
+            }
+        }
+
+
+        .result {
+            .num {
+                color: #3452e4;
+            }
+
+            // 统计
+            .tongji {
+                color: #43464a;
+
+                .title {
+                    >span:first-child {
+                        display: inline-block;
+                        width: 118px;
+                        height: 18px;
+                        margin-right: 15px;
+                        vertical-align: middle;
+                        color: #d9eafb;
+                        background: url('./imgs/zhcx.png');
+                    }
+                }
+
+                .typeWrap {
+                    >span {
+                        color: blue;
+                        margin-left: 5px;
+                    }
+                }
+
+                .content {
+                    height: 100px;
+                    overflow: auto;
+                    margin: 8px 0;
+                }
+            }
+
+            //列表
+            .lists {
+                height: 290px;
+                overflow: hidden;
+
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+
+                    >span:first-child {
+                        display: inline-block;
+                        width: 117px;
+                        height: 18px;
+                        margin-right: 15px;
+                        vertical-align: middle;
+                        color: #d9eafb;
+                        background: url('./imgs/zhgl.png');
+                        vertical-align: middle;
+                    }
+
+                    .export {
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+
+                .tableWrap {
+                    height: 260px;
+                    overflow: auto;
+                }
+            }
+        }
+
+
+
+        .operation {
+            top: 0;
+            right: -60px;
+            position: absolute;
+            transition: 0.3s;
+
+            &.shrink {
+                right: 60px;
+            }
+
+            >div {
+                width: 53px;
+                height: 49px;
+                margin-top: 15px;
+                cursor: pointer;
+
+                &.add {
+                    background: url('./imgs/个例新增.png');
+                }
+
+                &.audit {
+                    position: relative;
+                    background: url('./imgs/个例审核.png');
+
+                    .num {
+                        position: absolute;
+                        top: -3px;
+                        right: -5px;
+                        width: 17px;
+                        height: 17px;
+                        text-align: center;
+                        line-height: 17px;
+                        color: #fff;
+                        background: red;
+                        border-radius: 50%;
+                    }
+                }
+
+                &.list {
+                    background: url('./imgs/noPass.png');
+                }
+
+                &.fenxi {
+                    background: url('./imgs/fenx.png');
+                }
+
+                &:hover {
+                    background-position-y: 49px;
+                }
+            }
+        }
+    }
+
+    .table {
+        width: 100%;
+
+        thead {
+            th {
+                border: 1px solid #95bbc5;
+                text-align: center;
+                background: #479dcc;
+                color: #fff;
+            }
+        }
+
+        tbody {
+            &.empty {
+                border: 1px solid #000;
+
+                td {
+                    height: 260px;
+                }
+            }
+
+            tr {
+                &:nth-of-type(2n + 1) {
+                    background: #e8f2ff;
+                }
+
+                &:hover {
+                    background: #d8eafb;
+                }
+            }
+
+            td {
+                border: 1px solid #e6d6d6;
+                text-align: center;
+                font-size: 12px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                &.lang {
+                    max-width: 120px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                >.number {
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    border-radius: 50%;
+                    border: 1px solid #92cae8;
+                    background: #8ad4ff;
+                }
+
+                &.date {
+                    font-size: 12px;
+                    padding: 6px 5px;
+                }
+
+                >.look {
+                    width: 60px;
+                    height: 22px;
+                    background: url('./imgs/look.png');
+                    cursor: pointer;
+
+                    &:hover {
+                        background-position-y: 22px;
+                    }
+                }
+
+                >.compile {
+                    color: blue;
+                    margin: 0 8px;
+                    cursor: pointer;
+                }
+
+                >.delete {
+                    color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //登陆框
+    .admModal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 900;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+
+        .loginWrapper {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 240px auto;
+            width: 400px;
+            height: 300px;
+            background: url('../../assets/images/login_bg.jpg') no-repeat;
+            background-size: contain;
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 10px;
+
+            >h3 {
+                text-align: center;
+                margin-top: 20px;
+                color: #615371;
+                font-size: 18px;
+            }
+
+            /deep/.login-form {
+                margin-top: 40px;
+                margin-left: 58px;
+            }
+
+            .btnWrap {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                width: 270px;
+
+                /deep/.login-form-button {
+                    width: 100%;
+                }
+            }
+
+            /deep/.cancel {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .modFade-enter-active,
+    .modFade-leave-active {
+        transition: 0.3s;
+    }
+
+    .modFade-enter,
+    .modFade-leave-to {
+        opacity: 0;
+    }
+
+    /deep/.ant-select-selection--single {
+        width: 70px;
+    }
+}
