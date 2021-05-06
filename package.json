@@ -15,7 +15,7 @@
         "core-js": "^2.6.5",
         "dom-to-image": "^2.6.0",
         "element-ui": "^2.13.0",
-        "highcharts": "^7.2.0",
+        "highcharts": "^9.0.0",
         "leaflet": "^1.6.0",
         "moment": "^2.24.0",
         "vue": "^2.6.10",
